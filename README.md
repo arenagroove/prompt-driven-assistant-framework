@@ -35,12 +35,11 @@ prompt-driven-assistant-framework/
 ├── utilities/              # Prompt testing, examples, placeholders
 ├── behavior-layers/        # Memory, dynamic switching, agent chaining
 ├── interface-modules/      # Preset modes, output schemas, multimodal logic
-├── meta-tools/             # Prompt generation, chaining, meta-assistant logic
+├── meta-tools/             # Prompt generation, consensus logic, emergent rules
 ├── system-config/          # Progress, index, config, and export template
 ├── scaffolds/              # Instruction sets for Custom GPT & role testing
 ├── test-cases/             # Validated assistant behaviors
 ├── README.md
-├── QUICKSTART.md           # (Optional) Fast-start guide
 └── LICENSE
 ```
 
@@ -54,8 +53,6 @@ prompt-driven-assistant-framework/
 | `persona-perspective-layer.md` | How the assistant thinks, speaks, and sees |
 | `creativity-level-control.md` | How symbolically it interprets inputs (Drift 0–6) |
 | `output-format-structure.md` | How it formats its response (bullets, story, JSON, etc.) |
-
-Coming next: context management, refinement loops, multi-assistant flows, and symbolic prompt generation.
 
 ---
 
@@ -75,36 +72,21 @@ Coming next: context management, refinement loops, multi-assistant flows, and sy
 - Test: Reframed About section and brand language for a tech founder audience
 - Validated: In Custom GPT with follow-up and clarification behavior
 
-### ✅ Impersonation Game (Tested in Simulation Mode)
+### ✅ Impersonation Game (Structured Version)
 - Role: Human pretending not to be a machine
 - User Role: LLM performing structured, accurate responses
 - Drift: Level 4 (symbolic + fallibility modeling)
 - Format: Turn-based dialogue with scoring and feedback
 - Test: Explored boundaries of realism, identity, and symbolic drift
-- Validated: Using prompt scaffold `impersonation-game-v0.2.md` with 4 full turns and self-aware scoring
+- Validated: Using `impersonation-game-v0.2.md` scaffold
 
----
-
-## 🚀 Getting Started
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourname/prompt-driven-assistant-framework.git
-   ```
-
-2. Explore the `core-modules/` folder  
-3. Combine desired modules using `system-config/active-modules.json`  
-4. (Soon) Use `prompt-export-template.md` to compile your assistant  
-5. Paste into ChatGPT, Claude, Groq, or your preferred LLM tool
-
----
-
-## 📌 Who It’s For
-
-- Prompt engineers designing reusable, interpretable assistants
-- Creators building Custom GPTs or Groq wrappers
-- Strategists shaping human-aligned AI output
-- UX writers or researchers exploring prompt-based behavior design
+### ✅ Impersonation Game (Fluid Version)
+- Role: Human pretending not to be a machine
+- User Role: LLM simulating structure or neutrality
+- Drift: Level 4 (symbolic + tone drift)
+- Format: Unstructured dialogue, consensus-based scoring (optional)
+- Test: Explored non-linear interaction, ambiguity, and rule drift
+- Validated: Using `impersonation-game-v0.3-fluid.md`, leading to emergent module design
 
 ---
 
@@ -116,6 +98,10 @@ Coming next: context management, refinement loops, multi-assistant flows, and sy
 - Multimodal content formatting
 - Symbolic-to-structural prompt transformers
 - Visual builder (possibly)
+
+### 🧠 Emergent Interaction Support (Now in Progress)
+- `emergent-rules-logic.md` — Allows the assistant to suggest, mutate, or discard rules mid-play (*validated in v0.3 scaffold*)
+- `consensus-negotiation-layer.md` — Models scoring reflection, soft disagreement, and flexible outcome logic (*validated in v0.3 scaffold*)
 
 ---
 
@@ -132,6 +118,6 @@ Once v1.1.0 launches, we’ll open up issue tracking and release planning.
 
 ```json
 "version": "1.0.0",
-"status": "Core modules complete + 3 validated tests",
+"status": "Core modules complete + 4 validated tests",
 "next": "context-history-management.md"
 ```

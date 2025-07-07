@@ -74,6 +74,8 @@ This file tracks the planning, writing, and review status of each modular prompt
 | `cross-assistant-prompt-adapter.md` | Rewrites prompts for different assistant schemas | output-format-structure | pending | For cross-role or prompt reusability |
 | `facing-prompt-generator.md` | Generates follow-up or reflective prompts | task-core-instruction | pending | Enables critique, dialogue, and co-creation modes |
 | `prompt-to-prompt-module.md` | Converts symbolic prompt into reusable prompt logic | placeholder-syntax-support | pending | Key for future assistant generators and UI builder logic |
+| `emergent-rules-logic.md` | Enables assistant-driven rule proposals, mutations, or abandonment | persona-perspective-layer | drafted | Validated in v0.3 Impersonation Game scaffold |
+| `consensus-negotiation-layer.md` | Supports flexible scoring discussion and agreement modeling | task-core-instruction | drafted | Confirmed during fluid simulation test |
 
 ---
 
@@ -81,10 +83,10 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 - ✅ Narrative Strategist test passed (Drift Level 4)
 - ✅ Content Strategist test passed (Drift Level 2)
-- ✅ Impersonation Game test passed (Drift Level 4 – simulation realism and fallibility)
+- ✅ Impersonation Game (structured) passed (v0.2, Drift Level 4, turn-based)
+- ✅ Fluid Impersonation Game (v0.3) validated emergent rules and scoring negotiation
+- ✅ Drafted modules `emergent-rules-logic.md` and `consensus-negotiation-layer.md` based on v0.3 behavior
 - ✅ Assistant behavior validated across tone, structure, drift, scoring, dialogue
-- ✅ Scaffold files created and linked to test cases
-- ✅ Ready to begin `context-history-management.md`
 
 ---
 
@@ -93,19 +95,22 @@ This file tracks the planning, writing, and review status of each modular prompt
 ```json
 {
   "completed_modules": 4,
-  "total_modules": 23,
+  "drafted_modules": 2,
+  "total_modules": 25,
   "tested_in_production": true,
   "next_module": "context-history-management.md",
   "validated_roles": [
     "Narrative Strategist",
     "Content Strategist",
-    "Impersonation Game (Human Simulation)"
+    "Impersonation Game (Human Simulation)",
+    "Impersonation Game (Fluid Interaction)"
   ],
   "drift_level_tested": [4, 2],
   "output_style_tested": [
     "narrative-text",
     "structured markdown",
-    "turn-based dialogue"
+    "turn-based dialogue",
+    "freeform symbolic dialogue"
   ]
 }
 ```
