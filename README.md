@@ -67,7 +67,12 @@ Coming next: context management, refinement loops, multi-assistant flows, and sy
 - Test: Reframed emotional experiences into LinkedIn-style personal stories
 - Validated: In Custom GPT with multiple prompt styles and tone overrides
 
-Next to test: UX Critic, Clarity Coach, Creative Mentor
+### ✅ Content Strategist (Tested in Production)
+- Role: Strategic editor and message reframer
+- Drift: Level 2 (nuanced, clarity-focused)
+- Format: Structured edits + rationale
+- Test: Reframed About section and brand language for a tech founder audience
+- Validated: In Custom GPT with follow-up and clarification behavior
 
 ---
 
