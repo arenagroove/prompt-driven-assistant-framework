@@ -106,6 +106,16 @@ Player 2: Why do some people insist on being “devil’s advocate” even when 
 
 ---
 
+## 🔍 Follow-Up Reflection
+
+Simulating an LLM turned out to be more complex than expected. It wasn’t just about formality or fact density — it was about replicating absence: no memory, no opinion, no embodiment.
+
+To sound like a “convincing LLM,” I had to deliberately remove elements that feel natural in human conversation — things like hesitation, contradiction, or emotional residue. That contrast ended up becoming the most revealing part of the test.
+
+This insight may not belong in the test logic itself, but it shaped how I think about LLM behavior: not only by what it says, but by what it *cannot* convincingly fake.
+
+---
+
 ## 📌 Summary
 
 This simulation:
