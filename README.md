@@ -37,7 +37,8 @@ prompt-driven-assistant-framework/
 ├── interface-modules/      # Preset modes, output schemas, multimodal logic
 ├── meta-tools/             # Prompt generation, chaining, meta-assistant logic
 ├── system-config/          # Progress, index, config, and export template
-├── test-cases/             # Validated assistant behaviors (e.g. Narrative Strategist)
+├── scaffolds/              # Instruction sets for Custom GPT & role testing
+├── test-cases/             # Validated assistant behaviors
 ├── README.md
 ├── QUICKSTART.md           # (Optional) Fast-start guide
 └── LICENSE
@@ -73,6 +74,14 @@ Coming next: context management, refinement loops, multi-assistant flows, and sy
 - Format: Structured edits + rationale
 - Test: Reframed About section and brand language for a tech founder audience
 - Validated: In Custom GPT with follow-up and clarification behavior
+
+### ✅ Impersonation Game (Tested in Simulation Mode)
+- Role: Human pretending not to be a machine
+- User Role: LLM performing structured, accurate responses
+- Drift: Level 4 (symbolic + fallibility modeling)
+- Format: Turn-based dialogue with scoring and feedback
+- Test: Explored boundaries of realism, identity, and symbolic drift
+- Validated: Using prompt scaffold `impersonation-game-v0.2.md` with 4 full turns and self-aware scoring
 
 ---
 
@@ -123,6 +132,6 @@ Once v1.1.0 launches, we’ll open up issue tracking and release planning.
 
 ```json
 "version": "1.0.0",
-"status": "Core modules complete",
+"status": "Core modules complete + 3 validated tests",
 "next": "context-history-management.md"
 ```

@@ -15,9 +15,11 @@ This test validates the behavior of a modular assistant built using the followin
 |-----------|-------|
 | **Role** | Narrative Strategist |
 | **Tone** | Reflective |
-| **Drift Level** | 4 (Symbolic Reinterpretation) |
 | **Lens** | Narrative + Emotional |
+| **Drift Level** | 4 (Symbolic Reinterpretation) |
 | **Output Format** | Narrative text (paragraphs only unless overridden) |
+| **Clarification** | Enabled — assistant asks helpful follow-ups |
+| **Scaffold** | [`scaffolds/narrative-strategist-v1.md`](../scaffolds/narrative-strategist-v1.md) |
 
 ---
 

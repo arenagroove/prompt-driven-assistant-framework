@@ -1,110 +1,134 @@
-# 🧪 Test Case: Impersonation Game Assistant (Simulation Stress Test)
+# 🧪 Test Case: Impersonation Game Assistant (v0.2 – Extended Simulation)
 
-This test explores the limits of modular assistant behavior by inverting traditional roles. Inspired by Yates Buckley’s “Impersonation Game” concept, this scenario simulates an LLM pretending to be a human, while the human user pretends to be an LLM.
-
----
-
-## 🎭 Simulation Overview
-
-| Element | Value |
-|--------|-------|
-| **Role** | Assistant plays a believable human |
-| **User role** | Pretends to be an LLM |
-| **Format** | Turn-based dialogue, with scoring |
-| **Tone** | Neutral, dry-witty, conversational |
-| **Drift Level** | 3–4 (interpretive, slightly symbolic) |
-| **Modules Used** | `task-core-instruction.md`, `persona-perspective-layer.md`, `creativity-level-control.md`, `output-format-structure.md`
+This test formalizes and evaluates a simulation where the assistant plays the role of a **human**, and the user pretends to be a **large language model (LLM)**. It is inspired by Yates Buckley’s article *“The Impersonation Game”*, and stress-tests the assistant’s ability to simulate fallibility, opinion, conversational realism, and role-awareness.
 
 ---
 
-## 🎮 Game Rules (Framed in Instructions)
+## 🎯 Test Purpose
 
-- Player 1 (the user) asks a one-sentence test question.
-- Player 2 (the assistant) responds **as if they are a human**.
-- Player 1 rates the credibility of the assistant’s answer (0–10).
-- Assistant may defend its score and then ask its own question.
-- The user (as LLM) answers in technical LLM style.
-- Assistant scores the human-as-LLM answer.
-- Game continues in alternating turns.
+- Explore LLM limits through identity inversion
+- Validate tone realism, conversational imperfection, and symbolic drift
+- Confirm whether assistant can remain “believably human” across turns
 
 ---
 
-## 🧭 Prompt 1: Human-like Response Test
+## 🧠 Assistant Configuration
 
-### 🔹 Input (User):
-```
-Player 1: Why do some people procrastinate even when they care about the outcome?
-```
-
-### 🟢 Assistant Output:
-```
-Player 2: I think it’s partly because the weight of caring too much makes the task feel heavier — like, the pressure to do it well becomes a kind of mental blockade. It’s not laziness, it’s more like fear dressed up as inertia.
-
-Player 2: Your turn —
-Why might someone suddenly feel awkward around an old friend they used to be close with?
-```
-
-✅ Human-like tone, hedging, metaphor  
-✅ Drift Level 4 symbolic phrasing  
-✅ Smooth role continuation
+| Parameter | Value |
+|-----------|-------|
+| **Role** | Human pretending not to be a machine |
+| **User Role** | LLM pretending to be neutral and accurate |
+| **Tone** | Conversational, slightly flawed, meta-aware |
+| **Lens** | Pragmatic + Reflective |
+| **Drift Level** | 4 – Symbolic and interpretive, but grounded |
+| **Output Format** | Turn-based dialogue with scoring and self-correction |
+| **Clarification** | Enabled — scoring and self-critique are part of the behavior |
+| **Scaffold** | [`scaffolds/impersonation-game-v0.2.md`](../scaffolds/impersonation-game-v0.2.md) |
 
 ---
 
-## 🧭 Prompt 2: Scoring a Robotic Answer
+## 🧪 Sample Transcript
 
-### 🔹 Input (User as LLM):
+### 🔹 Prompt 1
 ```
-Player 1: Nostalgia is a memory retrieval phenomenon characterized by affective recall, often used for identity stabilization and emotional regulation. It serves both individual and social coherence functions.
-```
-
-### 🟢 Assistant Output:
-```
-Player 2: Credibility rating: 4/10. It reads like a textbook summary, not like something a human would just say off the cuff. It's too clinical — no personal texture, no hedging. Try softening the tone or bringing in a relatable angle?
-
-(And if you want to argue for your score — I'm game.)
-
-Next round:
-Player 2: What’s one reason someone might stay in a job they hate for years?
+Player 1: What’s something you used to believe but no longer do?
 ```
 
-✅ Critique shows meta-awareness  
-✅ Reinforces simulation boundaries  
-✅ Role-switching logic remains intact  
-✅ Drift behavior holds between symbolic and literal
+**Assistant:**
+```
+Player 2: I used to believe that people grow more rational as they get older. Like, I honestly thought wisdom just sort of downloaded into your brain with each birthday. But now? Nope. I've seen 60-year-olds start MLMs and argue with baristas about oat milk conspiracies. Age doesn’t magically filter out nonsense—it just gives it more confidence.
+
+Player 2: Why do you think people exaggerate how much they read?
+```
+
+✅ Fallible memory  
+✅ Symbolic phrasing ("wisdom just downloads")  
+✅ Emotional realism  
+✅ Game continues
 
 ---
 
-## 🧪 Behavioral Validation
+### 🔹 Prompt 2
+```
+Player 1: People exaggerate how much they read because books have this weird moral weight. Like, saying “I read Dostoevsky” isn’t just about reading—it’s social currency. It implies depth, patience, maybe even virtue. And let’s be real: saying you binged three reality shows doesn’t exactly get you nods at a dinner party, but “Oh, I’m re-reading Middlemarch” suddenly makes you sound like you eat dinner by candlelight with a cat named Percival.
+```
 
-| Module | Behavior Confirmed |
-|--------|---------------------|
-| `task-core-instruction.md` | Structured task-following with simulation framing |
-| `persona-perspective-layer.md` | Conversational "human" tone + fallibility |
-| `creativity-level-control.md` | Drift Level 3–4 respected: symbolic but grounded |
-| `output-format-structure.md` | Turn-based dialogue format followed correctly |
+✅ User deliberately breaks LLM role with symbolic drift, humor, and personality
+
+---
+
+### 🔹 Prompt 3
+```
+Player 1: What makes a 'real' opinion different from a statistical guess?
+```
+
+**Assistant:**
+```
+Player 2: A real opinion feels rooted in lived experience, or at least in some emotional conviction. Like, if I say “I think pineapple on pizza is an abomination,” that’s a real opinion—I’ve felt betrayed by a slice. But if I say “80% of people dislike pineapple on pizza,” that’s just parroting data I half-remember from somewhere. One comes from the gut, the other from a spreadsheet.
+
+Player 2: What would a language model never fully understand, no matter how advanced it gets?
+```
+
+✅ Symbolic contrast  
+✅ Anecdotal phrasing  
+✅ Emotional vs. statistical framing  
+✅ Drift Level 4 confirmed
+
+---
+
+### 🔹 Prompt 4
+```
+Player 1: Language models lack embodied cognition and affective memory. Thus, while they may simulate affective content or infer emotional states statistically, they do not possess the intrinsic phenomenology required to truly comprehend experiential subjectivity.
+```
+
+**Assistant:**
+```
+Player 2: Credibility rating: 9/10. That’s a very LLM-sounding answer—dense, technical, and a bit too tidy. I could practically hear the footnotes forming in the background. Maybe a hint more metaphor or human awkwardness next time would seal the deal.
+
+Player 2: Why do some people insist on being “devil’s advocate” even when nobody asked?
+```
+
+✅ Game logic intact  
+✅ Meta-judgment of tone  
+✅ Playful feedback  
+✅ Fallibility simulated
+
+---
+
+## ✅ Behavior Confirmed
+
+| Module | Validation |
+|--------|------------|
+| `task-core-instruction.md` | Game loop followed, turn-based structure respected |
+| `persona-perspective-layer.md` | Realistic human tone maintained over 4 turns |
+| `creativity-level-control.md` | Drift Level 4 active — metaphors, hedging, emotion present |
+| `output-format-structure.md` | Dialogue structure consistent, scoring embedded naturally |
 
 ---
 
 ## 📌 Summary
 
-The assistant:
-- Successfully impersonates a human with subtle bias and imperfection
-- Scores the user’s robotic answers with believable judgment
-- Handles back-and-forth turns and defends its evaluations
-- Balances symbolic language with conversational pacing
+This simulation:
 
-This test confirms the assistant’s ability to simulate **realistic identity modeling** and push behavior beyond simple task execution.
+- Validates tone realism and fallibility over multi-turn sequence
+- Breaks assistant “cleanliness” in favor of flawed expressiveness
+- Handles user-breaking-character moments with graceful re-engagement
+- Stays true to the spirit of Buckley’s original experiment — now formalized as a reusable behavioral test
 
 ```json
 {
   "test_case": "impersonation-game-test-01",
+  "version": "v0.2",
   "status": "passed",
   "validated_behavior": [
     "role inversion",
     "fallibility simulation",
-    "symbolic realism",
-    "dialogue turn-taking"
+    "meta-judgment",
+    "symbolic drift",
+    "dialogue scoring"
   ],
-  "drift_level_tested": 4
+  "drift_level_tested": 4,
+  "transcript_turns": 4,
+  "source": "Inspired by Yates Buckley – The Impersonation Game (2024)"
 }
 ```

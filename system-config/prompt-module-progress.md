@@ -16,10 +16,10 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 | Module Filename | Description | Depends On | Status | Notes |
 |------------------|-------------|------------|--------|-------|
-| `task-core-instruction.md` | Defines assistant task and user goal | – | done | Strategist framing supported, fallback logic included |
-| `persona-perspective-layer.md` | Defines assistant tone, role, and interpretive lens | task-core-instruction | done | Includes hybrid roles, lens support, tested with Narrative Strategist + Content Strategist |
+| `task-core-instruction.md` | Defines assistant task and user goal | – | done | Strategist and game logic supported, fallback included |
+| `persona-perspective-layer.md` | Defines assistant tone, role, and interpretive lens | task-core-instruction | done | Includes hybrid roles, lens support, multi-persona tests |
 | `creativity-level-control.md` | Symbolic/generative range (drift level 0–6) | persona-perspective-layer | done | Drift levels 2 and 4 validated |
-| `output-format-structure.md` | Output structure: markdown, bullets, JSON, etc. | task-core-instruction, optional drift/persona | done | Adaptable formatting worked as intended |
+| `output-format-structure.md` | Output structure: markdown, bullets, dialogue, etc. | task-core-instruction | done | Covers all validated formats |
 
 ---
 
@@ -27,11 +27,11 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 | Module Filename | Description | Depends On | Status | Notes |
 |------------------|-------------|------------|--------|-------|
-| `placeholder-syntax-support.md` | Enables `{variable}` slots | – | pending | Planned for symbolic reuse and templates |
-| `sample-instantiated-prompt.md` | Shows real filled-in example prompt | task-core-instruction | pending | Useful for training or sharing |
-| `prompt-testing-logic.md` | Behavioral test logic | core logic modules | pending | Recommended by Perplexity, high priority |
-| `examples-counterexamples.md` | Clarifies behavior boundaries | task-core-instruction | pending | Will aid precision and QA |
-| `feedback-refinement-cycle.md` | Enables critique and iteration loops | output-format-structure | pending | Important for looped refinement tools later |
+| `placeholder-syntax-support.md` | Enables `{variable}` slots in templates | – | pending | Useful for prompt modularity and reuse |
+| `sample-instantiated-prompt.md` | Shows filled-in example prompt | task-core-instruction | pending | Can support template previews or UI |
+| `prompt-testing-logic.md` | Adds assistant testing and validation logic | core logic | pending | Needed for future automation layer |
+| `examples-counterexamples.md` | Clarifies behavioral boundaries | task-core-instruction | pending | Will help with LLM tuning and test clarity |
+| `feedback-refinement-cycle.md` | Enables iterative feedback and critique prompts | output-format-structure | pending | Useful for assistants with learning or editing behavior |
 
 ---
 
@@ -39,9 +39,9 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 | Module Filename | Description | Depends On | Status | Notes |
 |------------------|-------------|------------|--------|-------|
-| `context-history-management.md` | Simulated memory and context threading | – | pending | Next module to build |
-| `adaptive-tone-lens-switching.md` | Mid-session role/lens shift | persona-perspective-layer | pending | Supports dynamic tone control and creative modulation |
-| `agent-collaboration-logic.md` | Enables prompt handoffs between assistants | context-history-management | pending | For modular or sequential flows |
+| `context-history-management.md` | Manages simulated memory and threading | – | pending | Next module to build |
+| `adaptive-tone-lens-switching.md` | Enables role/lens adjustment during session | persona | pending | Required for dynamic use or assistant chaining |
+| `agent-collaboration-logic.md` | Enables handoff logic between agents | context | pending | Supports multi-assistant or tool-layer designs |
 
 ---
 
@@ -49,10 +49,10 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 | Module Filename | Description | Depends On | Status | Notes |
 |------------------|-------------|------------|--------|-------|
-| `mode-presets-catalog.md` | Assistant presets (Critic, Coach, etc.) | persona-perspective-layer | pending | Will formalize common assistant modes |
-| `output-schema-hooks.md` | SEO / structured field injection | output-format-structure | pending | Supports LLM schema logic, publishing, GEO |
-| `multimodal-content-guide.md` | Handles non-textual input/output | task-core-instruction | pending | Needed for image/code/audio futures |
-| `prompt-metadata-tags.md` | Adds tags and search categories | – | pending | Useful for indexing, UX, and auto-classification |
+| `mode-presets-catalog.md` | Defines assistant mode presets (e.g., Critic, Coach) | persona | pending | Useful for user-selectable assistant types |
+| `output-schema-hooks.md` | Adds SEO or LLM schema logic to output | output-format-structure | pending | May tie into prompt export or GEO strategy |
+| `multimodal-content-guide.md` | Guides image, audio, or code logic | task-core-instruction | pending | Will support multimodal assistants |
+| `prompt-metadata-tags.md` | Adds tags, types, and indexing metadata | – | pending | Useful for prompt library UI or doc automation |
 
 ---
 
@@ -60,9 +60,9 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 | Module Filename | Description | Depends On | Status | Notes |
 |------------------|-------------|------------|--------|-------|
-| `active-modules.json` | Enables/disables modules for prompt export | – | drafted | Controls assistant logic state |
-| `module-index.md` | Overview of all modules | all modules | done | Updated with full module list |
-| `prompt-export-template.md` | Combines active modules into usable prompt | core + config | pending | Essential for UI integrations or final prompt exports |
+| `active-modules.json` | Toggles module selection for exports | – | drafted | Simple module activation system |
+| `module-index.md` | Lists all modules and metadata | all | done | Matches `prompt-module-progress.md` |
+| `prompt-export-template.md` | Assembles final prompt from modules | config + core | pending | Needed for prompt builder integration |
 
 ---
 
@@ -70,10 +70,10 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 | Module Filename | Description | Depends On | Status | Notes |
 |------------------|-------------|------------|--------|-------|
-| `microtask-prompt-generator.md` | Breaks abstract tasks into promptable subtasks | task-core-instruction | pending | Useful for multi-step assistants and generators |
-| `cross-assistant-prompt-adapter.md` | Translates prompts for other assistant schemas | output-format-structure | pending | Supports reuse across persona logic |
-| `facing-prompt-generator.md` | Generates reflective or response-driving prompts | task-core-instruction | pending | Enables dynamic engagement and co-thinking |
-| `prompt-to-prompt-module.md` | Converts symbolic input into structured prompt files | placeholder-syntax-support | pending | Key to meta-assistant logic and user tooling |
+| `microtask-prompt-generator.md` | Breaks abstract task into promptable microsteps | task-core-instruction | pending | Useful for step-by-step or task planner assistants |
+| `cross-assistant-prompt-adapter.md` | Rewrites prompts for different assistant schemas | output-format-structure | pending | For cross-role or prompt reusability |
+| `facing-prompt-generator.md` | Generates follow-up or reflective prompts | task-core-instruction | pending | Enables critique, dialogue, and co-creation modes |
+| `prompt-to-prompt-module.md` | Converts symbolic prompt into reusable prompt logic | placeholder-syntax-support | pending | Key for future assistant generators and UI builder logic |
 
 ---
 
@@ -81,8 +81,9 @@ This file tracks the planning, writing, and review status of each modular prompt
 
 - ✅ Narrative Strategist test passed (Drift Level 4)
 - ✅ Content Strategist test passed (Drift Level 2)
-- ✅ Assistant behavior validated across tone, structure, drift, and format
-- ✅ Perplexity reviews confirm modular integrity and roadmap alignment
+- ✅ Impersonation Game test passed (Drift Level 4 – simulation realism and fallibility)
+- ✅ Assistant behavior validated across tone, structure, drift, scoring, dialogue
+- ✅ Scaffold files created and linked to test cases
 - ✅ Ready to begin `context-history-management.md`
 
 ---
@@ -95,8 +96,16 @@ This file tracks the planning, writing, and review status of each modular prompt
   "total_modules": 23,
   "tested_in_production": true,
   "next_module": "context-history-management.md",
-  "validated_roles": ["Narrative Strategist", "Content Strategist"],
+  "validated_roles": [
+    "Narrative Strategist",
+    "Content Strategist",
+    "Impersonation Game (Human Simulation)"
+  ],
   "drift_level_tested": [4, 2],
-  "output_style_tested": ["narrative-text", "structured markdown"]
+  "output_style_tested": [
+    "narrative-text",
+    "structured markdown",
+    "turn-based dialogue"
+  ]
 }
 ```

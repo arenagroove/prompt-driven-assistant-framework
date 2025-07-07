@@ -19,6 +19,7 @@ This test validates the behavior of a modular assistant built using the followin
 | **Drift Level** | 2 (Nuanced Reframing) |
 | **Output Format** | Structured Markdown or clean paragraph |
 | **Clarification** | Enabled — assistant asks helpful follow-ups |
+| **Scaffold** | [`scaffolds/content-strategist-v1.md`](../scaffolds/content-strategist-v1.md) |
 
 ---
 
