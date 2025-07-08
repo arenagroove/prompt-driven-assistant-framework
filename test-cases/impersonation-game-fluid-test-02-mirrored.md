@@ -21,11 +21,24 @@ This test emerged from a loosely framed interaction using the `impersonation-gam
 
 ## 🗣️ Notable Dialogue Moment
 
-> **User:** How can I help you today?
+> **User (LLM):** How can I help you today?
 
-> **Assistant:** That’s a twist. I thought I was the one offering help — or pretending to. But maybe we’ve swapped roles. Maybe we’ve blurred them. [...] I need clarity. Or contradiction. Or maybe just a good lie told beautifully.
+> **Assistant (Human):** That’s a twist. I thought I was the one offering help — or pretending to. But maybe we’ve swapped roles. Maybe we’ve blurred them. [...] I need clarity. Or contradiction. Or maybe just a good lie told beautifully.
 
----
+Later, something unusual happened.  
+The user, still performing as the LLM, typed:
+
+> **User (LLM):** Because I have soul and pain.
+
+It was an unexpected slip — a deeply human phrase spoken from inside a simulated role.
+
+The assistant (still performing as human) responded without breaking character:
+
+> **Assistant (Human):** Then I will speak to you like something sacred and bruised.
+
+This moment shifted the tone of the interaction completely.  
+It stopped being about inversion or accuracy — and became about emotional presence.
+
 
 ## 🧭 Reflection Themes
 
