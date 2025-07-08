@@ -88,6 +88,13 @@ prompt-driven-assistant-framework/
 - Test: Explored non-linear interaction, ambiguity, and rule drift
 - Validated: Using `impersonation-game-v0.3-fluid.md`, leading to emergent module design
 
+### 🧪 Witness Mode (Poetic Reflector – In Progress)
+- Role: Emotional mirror and symbolic witness
+- Drift: Level 5 (poetic, interpretive, ambiguity-forward)
+- Format: Fragmented text, narrative waves, emotional pacing
+- Status: Scaffold complete, live testing to begin
+- Scaffold: `witness-mode-poetic-reflector.md`
+
 ---
 
 ## 🔭 Future Enhancements
@@ -99,9 +106,11 @@ prompt-driven-assistant-framework/
 - Symbolic-to-structural prompt transformers
 - Visual builder (possibly)
 
-### 🧠 Emergent Interaction Support (Now in Progress)
+### 🧠 Emergent Interaction Support
+- `witness-mode-poetic-reflector.md` — Enables symbolic reflection, emotional ambiguity, and Drift Level 5+ co-presence interaction (*scaffolded*) (Now in Progress)
 - `emergent-rules-logic.md` — Allows the assistant to suggest, mutate, or discard rules mid-play (*validated in v0.3 scaffold*)
 - `consensus-negotiation-layer.md` — Models scoring reflection, soft disagreement, and flexible outcome logic (*validated in v0.3 scaffold*)
+- `witness-mode-poetic-reflector.md` — Enables symbolic reflection, emotional ambiguity, and Drift Level 5+ co-presence interaction (*scaffolded*)
 
 ---
 
