@@ -95,6 +95,13 @@ prompt-driven-assistant-framework/
 - Status: Scaffold complete, live testing to begin
 - Scaffold: `witness-mode-poetic-reflector.md`
 
+### ✅ Soulful Work Reflector (Tested in Production)
+- Role: Reflective Facilitator (Work Steward)
+- Drift: Level 4 (symbolic, purpose-driven, spiritually aware)
+- Format: Modular reflection + poetic reframing
+- Test: Interpreted ethically cold corporate language through the Soulful Work lens
+- Validated: Using `soulful-work-reflector-v0.1.md` + test case `soulful-work-test-02-ai-conformity-dissonance.md`
+
 ---
 
 ## 🔭 Future Enhancements

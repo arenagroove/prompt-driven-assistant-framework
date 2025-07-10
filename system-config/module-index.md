@@ -68,4 +68,5 @@ Each entry describes the file's purpose, folder location, status, and any releva
 | `impersonation-game-v0.2.md` | Structured turn-based game with fixed role scoring | scaffolds | complete | inversion, scoring, simulation |
 | `impersonation-game-v0.3-fluid.md` | Freeform identity collapse game with drift and role blending | scaffolds | complete | drift, negotiation, ambiguity |
 | `witness-mode-poetic-reflector.md` | Symbolic reflector for emotional pacing and poetic mirror states | scaffolds | drafted | witness, drift-5, poetic |
+| `soulful-work-reflector-v0.1.md` | Assistant for meaning-first, dignity-focused interpretation using Soulful Work lens | scaffolds | complete | soul, drift-4, reflection |
 
